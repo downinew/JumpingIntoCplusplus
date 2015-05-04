@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Username and Password", "Us
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "99BottlesOfBeer", "99BottlesOfBeer\99BottlesOfBeer.vcxproj", "{5CE73B85-869C-470B-8CCE-243236A2BBE5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToe", "TicTacToe\TicTacToe.vcxproj", "{24B06928-B58E-4A3A-A16C-F0C01E2068CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -69,6 +71,10 @@ Global
 		{5CE73B85-869C-470B-8CCE-243236A2BBE5}.Debug|Win32.Build.0 = Debug|Win32
 		{5CE73B85-869C-470B-8CCE-243236A2BBE5}.Release|Win32.ActiveCfg = Release|Win32
 		{5CE73B85-869C-470B-8CCE-243236A2BBE5}.Release|Win32.Build.0 = Release|Win32
+		{24B06928-B58E-4A3A-A16C-F0C01E2068CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{24B06928-B58E-4A3A-A16C-F0C01E2068CA}.Debug|Win32.Build.0 = Debug|Win32
+		{24B06928-B58E-4A3A-A16C-F0C01E2068CA}.Release|Win32.ActiveCfg = Release|Win32
+		{24B06928-B58E-4A3A-A16C-F0C01E2068CA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
