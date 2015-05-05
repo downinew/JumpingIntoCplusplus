@@ -5,8 +5,8 @@ using namespace std;
 
 void printBoard(int board[]);
 string printChar(int position);
-int checkWin(int first, int second, int third);
-void checkBoard(int board[]);
+int isWin(int first, int second, int third);
+bool checkBoardWin(int board[]);
 
 enum TicTacToeSquare{
 	TTTS_blank,
@@ -18,20 +18,13 @@ enum TicTacToeSquare{
 int main(){
 
 	string welcome = "Welcome to Tic Tac Toe";
-	string descrip = "Player One: X and Player Two: O";
-	string playerOneRow = "Player 1: Please put in a row: ";
-	string playerOneCol = "Player 1: Please put in a col: ";
-
-	string playerTwoRow = "Player 2: Please put in a row: ";
-	string playerTwoCol = "Player 2: Please put in a col: ";
+	string descrip = "Player One: X and Player Two: O \n Enter 1 - 9 starting from top left.";
+	string playerOneNumString = "Player 1: Please put in a number: ";
+	string playerTwoNumString = "Player 2: Please put in a number: ";
+	string winner = "";
 	
-	int playerOneRowNum;
-	int playerOneColNum;
-
-	int playerTwoRowNum;
-	int playerTwoColNum;
-
-	int check = TTTS_blank;
+	int playerOneNum;
+	int playerTwoNum;
 
 	int board[9] = {
 		TTTS_blank, TTTS_blank, TTTS_blank,
@@ -43,33 +36,36 @@ int main(){
 	cout << welcome << "\n";
 	cout << descrip << "\n" << "\n";
 
-	while (check == 0){
+	printBoard(board);
 
+	while (true){
+
+		cout << playerOneNumString;
+		cin >> playerOneNum;
+		board[playerOneNum - 1] = TTTS_X;
+		cout << "\n";
 		printBoard(board);
 
-		cout << playerOneRow;
-		cin >> playerOneRowNum;
-		cout << "\n" << playerOneCol;
-		cin >> playerOneColNum;
-		cout << "\n" << playerTwoRow;
+		if (checkBoardWin(board) == true){
+			winner = "Player One Wins!";
+			break;
+		}
 
 
+		cout << playerTwoNumString;
+		cin >> playerTwoNum;
+		board[playerTwoNum - 1] = TTTS_O;
+		cout << "\n";
+		printBoard(board);
 
-
-
-
-
-
+		if (checkBoardWin(board) == true){
+			winner = "Player Two Wins!";
+			break;
+		}
 
 	}
 
-
-
-
-
-
-
-
+	cout << "\n" << winner << "\n \n";
 
 	system("pause");
 }
@@ -100,7 +96,7 @@ string printChar(int position){
 }
 
 
-int checkWin(int first, int second, int third){
+int isWin(int first, int second, int third){
 
 	if (first == TTTS_O && second == TTTS_O && third == TTTS_O){
 		return TTTS_O;
@@ -108,8 +104,35 @@ int checkWin(int first, int second, int third){
 	else if (first == TTTS_X && second == TTTS_X && third == TTTS_X){
 		return TTTS_X;
 	}
-	
-	
 	return TTTS_blank;
+}
 
+bool checkBoardWin(int board[]){
+	
+	if (isWin(board[0], board[1], board[2]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[3], board[4], board[5]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[6], board[7], board[8]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[0], board[4], board[8]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[2], board[4], board[6]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[0], board[3], board[6]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[1], board[4], board[7]) != TTTS_blank){
+		return true;
+	}
+	else if (isWin(board[2], board[5], board[8]) != TTTS_blank){
+		return true;
+	}
+	
+	return false;
 }
