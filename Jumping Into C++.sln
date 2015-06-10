@@ -27,7 +27,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicTacToe", "TicTacToe\TicT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoinFlip", "CoinFlip\CoinFlip.vcxproj", "{F93EC770-AFC1-4977-9013-94F016C6A4BB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnglishNumbersToText", "EnglishNumbersToText\EnglishNumbersToText.vcxproj", "{E4590C24-54AB-4EFC-89E4-2E57905CA570}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExperimentingWithMap", "EnglishNumbersToText\EnglishNumbersToText.vcxproj", "{E4590C24-54AB-4EFC-89E4-2E57905CA570}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10Values", "10Values\10Values.vcxproj", "{4836A32B-6DEF-4219-B455-4E5102AB3E80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{E4590C24-54AB-4EFC-89E4-2E57905CA570}.Debug|Win32.Build.0 = Debug|Win32
 		{E4590C24-54AB-4EFC-89E4-2E57905CA570}.Release|Win32.ActiveCfg = Release|Win32
 		{E4590C24-54AB-4EFC-89E4-2E57905CA570}.Release|Win32.Build.0 = Release|Win32
+		{4836A32B-6DEF-4219-B455-4E5102AB3E80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4836A32B-6DEF-4219-B455-4E5102AB3E80}.Debug|Win32.Build.0 = Debug|Win32
+		{4836A32B-6DEF-4219-B455-4E5102AB3E80}.Release|Win32.ActiveCfg = Release|Win32
+		{4836A32B-6DEF-4219-B455-4E5102AB3E80}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
