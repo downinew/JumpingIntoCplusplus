@@ -52,6 +52,40 @@ int main()
 	cout << "\n" << person1;
 	cout << "\n" << person2 << "\n" << "\n";
 
+	int rows = 0;
+	int cols = 0;
+
+	cout << "Please enter a number: ";
+	cin >> rows;
+	cout << "Please enter a number: ";
+	cin >> cols;
+
+	int **p_p_multiplicationTable = new int*[rows];
+	
+	for (int i = 0; i < rows; i++)
+	{
+		p_p_multiplicationTable[i] = new int[cols];
+	}
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			p_p_multiplicationTable[i][j] = (i+1) * (j+1);
+			cout << " " << p_p_multiplicationTable[i][j] << " ";
+		}
+		cout << "\n";
+	}
+
+	for (int i = 0; i < rows; i++)
+	{
+		delete[] p_p_multiplicationTable[i];
+	}
+
+	delete[] p_p_multiplicationTable;
+
+	
+
 	system("pause");
 }
 
